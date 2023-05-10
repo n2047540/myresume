@@ -1,0 +1,40 @@
+
+h1{
+    font-size: 35px;
+    text-align: center;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+ }
+ nav {
+    background: #a7a6ae;
+    list-style-type: none;
+    padding: 0;
+    color: #ffffff;
+  }
+par {
+    padding: 50px;
+    width: 100%;
+  }
+h4{
+    text-decoration: underline;
+}
+h5{
+    margin: auto;
+    float: right;
+    overflow: scroll;
+}
+ia{
+    font-size: 22px;
+}
+ii{
+    font-size: 15px;
+}
+span.a{
+    font-weight: bold;
+}
