@@ -1,39 +1,78 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Page Education</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <section>
-        <nav>
-          <ul>
-            <li><a href="profile.html">Profile</a></li>
-            <li><a href="education.html">Education</a></li>
-            <li><a href="computerskills.html">Computer Skills</a></li>
-            <li><a href="experience.html">Experience</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </section>
+  <head>
+    <title>Page Education</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+      function displayDateTime() {
+        var date = new Date();
+        var options = {
+          weekday: "long",
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+          hour: "numeric",
+          minute: "numeric",
+          second: "numeric",
+        };
+        var formattedDateTime = date.toLocaleString(undefined, options);
+
+        document.getElementById("currentDateTime").textContent =
+          formattedDateTime;
+      }
+
+      // อัพเดตวันที่และเวลาทุกๆ 1 วินาที
+      setInterval(displayDateTime, 1000);
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm bg-info navbar-dark">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand"><span class="a">MyResume</span></a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="profile.html">Profile</a></li>
+          <li class="active"><a href="education.html">Education</a></li>
+          <li><a href="computerskills.html">Computer Skills</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <h5 href="#">
+              Current date and time is : <span id="currentDateTime"></span>
+            </h5>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <h1>
-        Education
+      <span class="a">Education</span>
     </h1>
-        <h2>
-            2020 - Present
-        </h2>
-        <ul>
-            <li><a>Bachelor of Science (Information Technology)</a></li>
-            <li><a>Kasetsart University Sriracha Campus</a></li>
-            <li><a>GPA : 3.02</a></li>
-        </ul>
-        <h2>
-            2017 - 2019
-        </h2>
-        <ul>
-            <li><a>Mathematics-Science Programme</a></li>
-            <li><a>La salle School Bangkok</a></li>
-            <li><a>GPA : 3.17</a></li>
-        </ul>
-</body>
+    <div class="container">
+      <h2>
+        <span class="a">2020 - Present</span>
+      </h2>
+      <ul>
+        <li><span>Bachelor of Science (Information Technology)</span></li>
+        <li><span>Kasetsart University Sriracha Campus</span></li>
+        <li><span>GPA : 3.02</span></li>
+      </ul>
+      <h2>
+        <span class="a">2017 - 2019</span>
+      </h2>
+      <ul>
+        <li><span>Mathematics-Science Programme</span></li>
+        <li><span>La salle School Bangkok</span></li>
+        <li><span>GPA : 3.17</span></li>
+      </ul>
+    </div>
+  </body>
 </html>

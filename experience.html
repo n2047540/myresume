@@ -3,51 +3,74 @@
 <head>
 <title>Page Experience</title>
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script>
+    function displayDateTime() {
+      var date = new Date();
+      var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+      var formattedDateTime = date.toLocaleString(undefined, options);
+
+      document.getElementById("currentDateTime").textContent = formattedDateTime;
+    }
+
+    // อัพเดตวันที่และเวลาทุกๆ 1 วินาที
+    setInterval(displayDateTime, 1000);
+  </script>
 </head>
 <body>
-    <section>
-        <nav>
-          <ul>
+    <nav class="navbar navbar-expand-sm bg-info navbar-dark">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand"><span class="a">MyResume</span></a>
+          </div>
+          <ul class="nav navbar-nav">
             <li><a href="profile.html">Profile</a></li>
             <li><a href="education.html">Education</a></li>
             <li><a href="computerskills.html">Computer Skills</a></li>
-            <li><a href="experience.html">Experience</a></li>
+            <li class="active"><a href="experience.html">Experience</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
-        </nav>
-      </section>
+          <ul class="nav navbar-nav navbar-right">
+            <li><h5 href="#">Current date and time is : <span id="currentDateTime"></span></h5></li>
+          </ul>
+        </div>
+      </nav>
     <h1>
-        Experience
+        <span class="a">Experience</span>
     </h1>
+    <div class="container">
       <h3>
-        Solo Project
+        <span class="a">Solo Project</span>
     </h3>
     <ul>
-        <li><a>Program processed fruit price calculation formula with Dev-C++(C language)</a></li>
-        <li><a>Water level sensor in bath with Arduino IDE</a></li>
+        <li><span>Program processed fruit price calculation formula with Dev-C++(C language)</span></li>
+        <li><span>Water level sensor in bath with Arduino IDE</span></li>
     </ul>
       <h3>
-        Group Project
+        <span class="a">Group Project</span>
     </h3>
         <h4>
-            As Programmer
+            <span class="a">As Programmer</span>
         </h4>
         <ul>
-            <li><a>Application coffee shop stock management system with Visual studio (C#) and Microsoft SQL server management</a></li>
-            <li><a>Application employee medical welfare system with Visual studio (C#) and Microsoft SQL server management</a></li>
-            <li><a>Application dormitory parcel management system with Android Studio (Dart)</a></li>
+            <li><span>Application coffee shop stock management system with Visual studio (C#) and Microsoft SQL server management</span></li>
+            <li><spana>Application employee medical welfare system with Visual studio (C#) and Microsoft SQL server management</span></li>
+            <li><span>Application dormitory parcel management system with Android Studio (Dart)</span></li>
         </ul>
         <h4>
-            As Tester
+            <span class="a">As Tester</span>
         </h4>
         <ul>
-            <li><a>Program BMI, BMR, TDEE calculation (Python)</a></li>
+            <li><span>Program BMI, BMR, TDEE calculation (Python)</span></li>
         </ul>
         <h4>
-            As Data preparation
+            <span class="a">As Data preparation</span>
         </h4>
         <ul>
-            <li><a>Book store system on Website</a></li>
+            <li><span>Book store system on Website</span></li>
         </ul>
+    </div>
 </body>
 </html>
